@@ -51,7 +51,7 @@ Search for `<script>alert('XSS:'+document.cookie)</script>` or `<img src=x onerr
 
 ### CSRF (M5) — /csrf
 
-1. Open `/csrf` to start the simulated victim session.
+1. Open `/csrf` to start the simulated victim session. Requests sent before this step receive HTTP 403.
 2. Use **Open Attacker Page** to open `http://localhost:5001/csrf/attacker` in a new tab; the form submits after three seconds.
 3. Refresh `/csrf` to see the changed email and timeline.
 4. Apply the fix and repeat: the forged request receives HTTP 403. A legitimate form submission includes the token.

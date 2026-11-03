@@ -209,6 +209,8 @@ def csrf_attacker():
 
 @app.route('/csrf/action', methods=['POST'])
 def csrf_action():
+    if 'victim_email' not in session:
+        abort(403)
     email = request.form.get('email', '')
     if not session.get('csrf_secure'):
         # ⚠️ VULNERABLE: state changes without verifying request intent.
