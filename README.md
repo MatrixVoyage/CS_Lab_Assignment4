@@ -1,4 +1,4 @@
-# VulnLab — Web Security Demonstration
+# Web Security Demonstration
 ### IIIT Allahabad | Cyber Security (IT-30001) 
 
 ## Setup & Run
